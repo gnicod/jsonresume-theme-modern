@@ -19,17 +19,13 @@
         <div class="col-md-6 col-sm-12">
         <h1>{{basics.name}}<h1>
 
-        <h2>{{basics.location.city}}</h2>
-        </div>
-        <div class="col-md-6 col-sm-12">
-        <img class="media-object img-circle pull-right" data-src="holder.js/64x64" alt="64x64" src="{{basics.gravatar}}" style="width: 100px; height: 100px; margin-top: 20px;">
-
+        <h2>{{basics.label}}</h2>
         </div>
         </div>
       <hr style="color: #ccc; height: 4px;" />
       <section class="row">
         <header class="col-md-3">
-          <h3>About</h3>
+          <h3>A propos</h3>
         </header>
         <div class="col-md-9">
         <p>{{basics.summary}}</p>
@@ -51,14 +47,14 @@
       {{#work.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Work Experience</h3>
+          <h3>Expérience professionnelle</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
             {{#work}}
             <h3>{{company}}</h3>
             <strong>{{position}}</strong>
-            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{startDate}} - {{endDate}}</p>
             <p>{{summary}}</p>
             <ul>
               {{#highlights}}
@@ -74,14 +70,14 @@
       {{#education.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Education</h3>
+          <h3>Cursus scolaire</h3>
         </header>
         <div class="col-md-9">
           <div class="skills">
             {{#education}}
             <h3>{{institution}}</h3>
             <h4>{{educationDetail}}</h4>
-            <p>{{startDateYear}} - {{endDateYear}}</p>
+            <p>{{startDate}} - {{endDate}}</p>
             <p>{{summary}}</p>
             <ul>
               {{#highlights}}
@@ -97,7 +93,7 @@
       {{#skills.length}}
       <section class="row">
         <header class="col-md-3">
-          <h3>Skills</h3>
+          <h3>Compétences techniques</h3>
         </header>
         <div class="col-md-9">
           <div class="row-fluid skills">
