@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{basics.firstName}} {{basics.lastName}}</title>
     <link href="http://bootswatch.com/lumen/bootstrap.min.css" rel="stylesheet" />
-   <style>
-    </style>
+    <link href="resume.css" rel="stylesheet" />
+    <style>.skill{ width:50%;float:left;}</style>
 
   
   </head>
@@ -39,7 +39,7 @@
         <strong>Twitter:</strong> <a href="http://twitter.com/{{.}}">{{.}}</a><br />
         {{/profiles.twitter}}
         {{#profiles.github}}
-        <strong>Github:</strong> <a href="http://github.com/{{.}}">{{.}}</a><br />
+        <strong>Github:</strong> <a href="https://github.com/{{.}}">{{.}}</a><br />
 
         {{/profiles.github}}
         </div>
@@ -98,7 +98,7 @@
         <div class="col-md-9">
           <div class="row-fluid skills">
             {{#skills}}
-            <ul class="col-md-6">
+            <ul class="col-md-6 skill">
 
               <li>
                 <h4>{{name}}</h4>
@@ -114,6 +114,22 @@
         </div>
       </section>
       {{/skills.length}}
+      {{#interests.length}}
+      <section class="row">
+        <header class="col-md-3">
+          <h3>Centres d'interêts</h3>
+        </header>
+        <div class="col-md-9">
+          <div class="skills">
+            {{#interests}}
+            <div>
+            <strong>{{name}}:</strong> <span> {{#keywords}} {{.}} {{/keywords}} </span>
+            </div>
+            {{/interests}}
+          </div>
+        </div>
+      </section>
+      {{/interests.length}}
       {{#references.length}}
       <section class="row">
         <header class="col-md-3">
